@@ -439,8 +439,8 @@ Notez que vous avez accès au code (c’est « open source »), alors vous pou
 | ld ADR      | 0x04XX   | ACC <- Mémoire[ADR]                             |
 | stop        | 0x05XX   | Arrêt du programme                              |
 | br ADR      | 0x07XX   | PC <- ADR                                       |
-| brz ADR     | 0x08XX   | (ACC = 0) → PC ← ADR | (ACC != 0) → PC ← PC + 1 |
-| brnz ADR    | 0x09XX   | (ACC != 0) → PC ← ADR | (ACC = 0) → PC ← PC + 1 |
+| brz ADR     | 0x08XX   | (ACC = 0) → PC ← ADR \| (ACC != 0) → PC ← PC + 1 |
+| brnz ADR    | 0x09XX   | (ACC != 0) → PC ← ADR \| (ACC = 0) → PC ← PC + 1 |
 
 ### Opérations ALU
 
@@ -489,8 +489,8 @@ Notez que vous avez accès au code (c’est « open source »), alors vous pou
 | ldi      | 0x0BXX | ACC <-  Mémoire[MA]                             |
 | sti      | 0x0CXX | Mémoire[MA] <-  ACC                             |
 | br ADR   | 0x0DXX | PC <-  ADR                                      |
-| brz ADR  | 0x0EXX | (ACC = 0) → PC ← ADR | (ACC != 0) → PC ← PC + 1 |
-| brnz ADR | 0x0FXX | (ACC != 0) → PC ← ADR | (ACC = 0) → PC ← PC + 1 |
+| brz ADR  | 0x0EXX | (ACC = 0) → PC ← ADR \| (ACC != 0) → PC ← PC + 1 |
+| brnz ADR | 0x0FXX | (ACC != 0) → PC ← ADR \| (ACC = 0) → PC ← PC + 1 |
 | shl      | 0x10XX | ACC <-  ACC << 1                                |
 | shr      | 0x11XX | ACC <-  ACC >> 1                                |
 | lea ADR  | 0x12XX | MA <- ADR                                       |
